@@ -390,6 +390,9 @@ body {
       .header nav.fixed-nav-visible ul li:hover {
         background: rgba(22, 160, 133, 0.5);
         transition: 0.25s; }
+        .header nav.fixed-nav-visible ul li:hover a {
+          color: #fff;
+          transition: color 0.5s; }
       .header nav.fixed-nav-visible ul li a.livello-link {
         opacity: 1;
         transition: 0.5s; }
