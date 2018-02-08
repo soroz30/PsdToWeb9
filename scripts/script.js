@@ -19,14 +19,14 @@ $(function() {
         nextArrow: $('.community-arrows__right')
     });
     
-    const setActiveRange = (clientWidth) => {
+    const setActiveRange = clientWidth => {
         const oneThirdOfWindow = window.innerHeight * 0.33;
         const footerHeight = 145;
-        const downloadSectionCheck = document.body.scrollHeight - window.innerHeight - 145
+        const downloadSectionCheck = document.body.scrollHeight - window.innerHeight - 145;
         if (window.pageYOffset > downloadSectionCheck) {
-            return window.innerHeight * 0.7
+            return window.innerHeight * 0.7;
         } else {
-            return oneThirdOfWindow 
+            return oneThirdOfWindow;
         }
     }
     
@@ -50,7 +50,7 @@ $(function() {
             $('nav').removeClass().addClass('nav-general top-nav').css('visibility', 'visible');
         }
         else if (yOffset > 95 && yOffset < 500) {
-            $('nav').removeClass().addClass('nav-general fixed-nav-hidden')
+            $('nav').removeClass().addClass('nav-general fixed-nav-hidden');
             setTimeout(() => {
                 const stillHidden = window.pageYOffset > 95 && window.pageYOffset < 500;
                 stillHidden && $('nav').css('visibility', 'hidden');
