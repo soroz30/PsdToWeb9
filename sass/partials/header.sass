@@ -1,0 +1,188 @@
+/* ===================================
+   Header
+   =================================*/
+
+.header
+  background: url(../images/Livello1.png) center/cover no-repeat
+  height: 100vh
+  position: relative
+  text-align: center
+  @media #{$max-sm}
+    height: auto
+    min-height: 450px
+  nav
+    display: none
+  nav.nav-general
+    display: block
+    left: 0
+    right: 0
+    top: 0
+    ul
+      display: flex
+      justify-content: center
+      @media #{$max-sm}
+        flex-wrap: wrap
+        padding: 10px 0 0
+      li
+        text-align: center
+        width: calc(18vw)
+        @media #{$max-sm}
+          order: 1
+        &:nth-of-type(3)
+          @media #{$max-sm}
+            order: 0
+        a
+          color: #fff
+          display: block
+          line-height: 55px
+          text-decoration: none
+          text-transform: uppercase
+          &:hover
+            color: $light-green
+            transition: color 0.3s
+        .livello-link
+          background: url(../images/Livello2.png)
+          display: block
+          height: 55px
+          margin: 0 auto
+          width: 53px
+          @media #{$max-sm}
+            margin: 0 auto
+        .burger-icon
+          display: none
+          width: 35px
+          span
+            background: rgba(255, 255, 255, 0.5)
+            display: block
+            height: 2px
+            margin: 5px 0
+            width: 30px
+            transition: 0.5s
+        .burger-icon.burger-open
+          span
+            &:first-of-type
+              transform: rotate(45deg) translate(7px, 5px)
+            &:nth-of-type(2)
+              opacity: 0
+            &:last-of-type
+              transform: rotate(-45deg) translate(5px, -3px)
+  nav.top-nav
+    position: absolute
+    ul
+      padding: 40px 0 0
+  nav.fixed-nav-hidden
+    background: rgba(0, 0, 0, 0)
+    transition: background 0.5s
+    position: fixed
+    top: 0
+    ul
+      padding: 0
+      li
+        a.livello-link
+          opacity: 0
+        a
+          color: rgba(0, 0, 0, 0)
+  nav.fixed-nav-visible
+    background: rgba(0, 0, 0, 0.5)
+    transition: background 0.5s
+    position: fixed
+    z-index: 2
+    ul
+      padding: 0
+      li.livello
+        &:hover
+          background: transparent
+      li
+        &:hover
+          background: rgba(22, 160, 133, 0.5)
+          transition: 0.25s
+          a
+            color: #fff
+            transition: color 0.5s
+        a.livello-link
+          opacity: 1
+          transition: 0.5s
+        a.active
+          color: $light-green
+          &:hover
+            color: #fff
+        a
+          color: #fff
+          transition: color 0.5s
+  nav.burger-nav
+    background: rgba(0, 0, 0, 0.5)
+    max-height: 55px
+    overflow: hidden
+    position: fixed
+    top: 0
+    transition: max-height 0.3s
+    z-index: 2
+    ul 
+      padding: 0
+      li.livello
+        flex: 100%
+      li
+        flex: 60%
+        &:not(.livello)
+          background: rgba(0, 0, 0, 0.6)
+        .burger-icon
+          cursor: pointer
+          display: block
+          left: 5%
+          position: absolute
+          top: 14.5px
+  nav.burger-nav.open
+    max-height: 1000px
+    transition: max-height 0.5s
+  h1
+    color: #fff
+    font-size: 42px
+    margin: 0 0 10px
+    padding: 370px 0 0
+    text-align: center
+    text-transform: uppercase
+    @media #{$max-lg}
+      margin: 0 0 10px
+      padding: 320px 0 0
+    @media #{$max-md} and (orientation: landscape)
+      margin: 0 0 10px
+      padding: 230px 0 0
+    @media #{$max-sm}
+      font-size: 30px
+      margin: 0 0 10px
+      padding: 105px 0 0
+  p
+    color: #fff
+    font-size: 20px
+    text-align: center
+    @media #{$max-md}
+      font-size: 16px
+  .button__header
+    @include button
+    background: $light-green
+    border-radius: 5px
+    margin: 30px auto 0
+    padding: 20px 40px
+    @media #{$max-sm}
+      font-size: 14px
+      padding: 15px 30px
+  
+.social-icons
+  display: flex
+  flex-direction: row
+  left: 0
+  right: 0
+  bottom: 25px
+  position: absolute
+  @media #{$max-md}
+    bottom: 10px
+  ul
+    display: flex
+    margin: 0 auto
+    li
+      padding: 0 10px
+      i
+        color: #fff
+      &:hover i
+        color: $light-green
+        transition: color 0.25s

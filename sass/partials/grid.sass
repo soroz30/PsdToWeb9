@@ -1,0 +1,25 @@
+/* ===================================
+   Grid and Container
+   =================================*/
+
+$sizes: ($general-col: '' , $max-lg: '-lg', $max-md: '-md', $max-sm: '-sm', $max-xs: '-xs')
+
+@each $media, $size in $sizes
+  @for $i from 0 through 12
+    $width: percentage($i / 12)
+    @media #{$media}
+      .col#{$size}-#{$i}
+        width: $width
+
+.container
+  margin: 0 auto
+  max-width: 80%
+  display: flex
+  flex-wrap: wrap
+  @media #{$max-sm}
+    max-width: 90%
+    
+.row
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap

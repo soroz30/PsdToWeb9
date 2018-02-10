@@ -1,0 +1,52 @@
+/* ================================
+   Footer
+   ==============================*/
+    
+.footer
+  padding: 45px 0 35px
+  .container
+    justify-content: space-between
+    @media #{$max-xs}
+      flex-direction: column
+      justify-content: center
+    .footer-list-block
+      display: flex
+      flex-direction: column
+      .links-list
+        display: flex
+        @media #{$max-xs}
+          justify-content: center
+        li:first-of-type
+          padding: 0 10px 0 0
+        li:nth-of-type(2)
+          border-right: 2px solid $light-green
+          border-left: 2px solid $light-green
+          padding: 0 10px
+        li:last-of-type
+          padding: 0 0 0 10px
+        li a
+          color: #000
+          display: block
+          font-weight: bold
+          position: relative
+          text-decoration: none
+          text-transform: uppercase
+          &:before
+            background: $light-green
+            content: ''
+            position: absolute
+            bottom: -1px
+            height: 2px
+            width: 100%
+            transform: scale(0, 1)
+            transition: transform 0.25s
+          &:hover:before
+            transform: scale(1, 1)
+            transition: transform 0.25s
+      p
+        margin: 20px 0 0
+        @media #{$max-xs}
+          text-align: center
+          margin: 20px 0 10px
+    .img-container
+      text-align: center

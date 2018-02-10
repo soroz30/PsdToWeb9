@@ -1,0 +1,28 @@
+/* ===================================
+   Button
+   =================================*/
+
+@mixin button
+  border: none
+  color: #fff
+  display: inline-block
+  font-size: 16px
+  position: relative
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  @media #{$max-sm}
+    font-size: 14px
+  &:before
+    background: rgba(255, 255, 255, 0.5)
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    transition: 0.5s
+    width: 0
+  &:hover:before
+    background: rgba(255, 255, 255, 0)
+    transition: 0.5s
+    width: 100%
