@@ -61,7 +61,6 @@ $(function() {
         } 
     }
     
-    // $(window).scroll() nie dziala
     const forceScroll = () => {
         $(window).scrollTop(window.pageYOffset - 1);
         $(window).scrollTop(window.pageYOffset + 1);
