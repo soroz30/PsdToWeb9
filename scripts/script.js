@@ -95,7 +95,6 @@ $(function() {
         setMobileEvents();
     }
     
-    // problem przy odswiezeniu z burger menu
     largerDevice.matches && topStickyNavbar();
     !largerDevice.matches && setBurgerNavbar();
     largerDevice.addListener(mq => {
