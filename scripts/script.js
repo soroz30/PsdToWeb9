@@ -61,7 +61,6 @@ $(function() {
         } 
     }
     
-    // $(window).scroll() nie dziala
     const forceScroll = () => {
         $(window).scrollTop(window.pageYOffset - 1);
         $(window).scrollTop(window.pageYOffset + 1);
@@ -96,7 +95,6 @@ $(function() {
         setMobileEvents();
     }
     
-    // problem przy odswiezeniu z burger menu
     largerDevice.matches && topStickyNavbar();
     !largerDevice.matches && setBurgerNavbar();
     largerDevice.addListener(mq => {
