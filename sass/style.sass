@@ -2,6 +2,241 @@
 @import "partials/variables"
 @import "partials/grid"
 @import "partials/general"
-@import "partials/main"
+
+/* ====================================
+   Header
+   ==================================*/
+
 @import "partials/header"
+
+      
+/* ==============================
+   Main general
+   ============================*/
+  
+.main__h2
+  color: $light-green
+  font-size: 26px
+  font-weight: bold
+  text-transform: uppercase
+
+.article__button
+  @include button
+  background: $light-green
+  border-radius: 5px
+  padding: 25px 45px 20px
+  @media #{$max-sm}
+    padding: 15px 30px
+  
+.bold
+  font-weight: bold
+  
+/* ==============================
+   Photoapp article
+   ============================*/
+   
+#photoapp
+  background: $darker-green url(../images/Hand.png) 75% bottom no-repeat
+  padding: 115px 0 90px
+  @media #{$max-sm}
+    background: $darker-green
+    padding: 75px 0 60px
+  h2
+    margin: 0 0 50px
+  p
+    margin: 0 0 50px
+    
+/* ============================
+   Design article
+   ==========================*/
+    
+#design
+  padding: 150px 0 80px
+  @media #{$max-sm}
+    padding: 75px 0 60px
+    text-align: right
+  .mockup-slides
+    @media #{$max-sm}
+      display: none
+  h2
+    margin: 0 0 40px
+  p:first-of-type
+    margin: 0 0 40px
+  .slides-counter
+    margin: 45px 0 0
+    @media #{$max-sm}
+      display: none
+  .slides-counter + p
+    @media #{$max-sm}
+      display: none
+      
+/* ===========================
+   Community article
+   =========================*/
+    
+.community
+  background: $darker-green
+  padding: 90px 0 120px
+  text-align: center
+  @media #{$max-xs}
+    padding: 60px 0 80px
+  .community-livello-img
+    display: block
+    margin: 70px auto 30px
+    @media #{$max-lg}
+      margin: 20px auto 30px
+  h3
+    font-size: 22px
+    font-weight: bold
+    margin: 20px
+    text-transform: uppercase
+    @media #{$max-lg}
+      margin: 20px 0
+  .community-arrows
+    text-align: right
+    @media #{$max-md}
+      text-align: center
+      margin: 10px 0
+  .community-slides__slide
+    text-align: right
+    @media #{$max-md}
+      text-align: center
+    img
+      width: 45%
+      &:first-of-type
+        padding: 0 2.5% 0 0
+      &:last-of-type
+        padding: 0 0 0 2.5%
+  .slick-slide img
+    display: inline-block
+    
+/* ===========================
+   Subscribe section
+   =========================*/
+    
+.subscribe
+  background: url(../images/Livello3.png) center/cover no-repeat
+  padding: 350px 0 325px
+  text-align: center
+  @media #{$max-lg}
+    padding: 275px 0
+  @media #{$max-md}
+    padding: 225px 0
+  @media #{$max-sm}
+    padding: 175px 0
+  @media #{$max-xs}
+    padding: 125px 0
+  h2
+    color: #fff
+    font-size: 26px
+    margin: 0 0 30px
+    text-transform: uppercase
+    @media #{$max-xs}
+      font-size: 18px
+  input[type="text"]
+    border: none
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+    color: #373737
+    font-weight: bold
+    padding: 25px 20px
+    text-transform: uppercase
+    vertical-align: top
+    width: 280px
+    @media #{$max-xs}
+      padding: 15px 10px
+      width: 200px
+  input[type="submit"]
+    background: $light-green url(../images/fa-check.png) center no-repeat
+    border: none
+    height: 65px
+    width: 60px
+    margin: 0 0 0 -5px
+    @media #{$max-xs}
+      height: 45px
+      
+/* ============================
+   Download section
+   ==========================*/
+    
+#download
+  background: $darker-green
+  padding: 90px 0 105px
+  text-align: center
+  @media #{$max-sm}
+    padding: 60px 0 70px
+  h2
+    font-size: 26px
+    font-weight: bold
+    margin: 0 0 15px
+    text-transform: uppercase
+  p
+    font-size: 18px
+    margin: 0 0 45px
+  a
+    display: flex
+    text-decoration: none
+  .store-buttons
+    @media #{$max-sm}
+      flex-direction: column
+    .store-buttons__first
+      display: flex
+      justify-content: flex-end
+      margin: 0 0 20px
+      padding: 0 15px 0 0
+      @media #{$max-sm}
+        padding: 0
+        justify-content: center
+    .store-buttons__last
+      padding: 0 0 0 15px
+      @media #{$max-sm}
+        display: flex
+        justify-content: center
+        padding: 0
+    .store-buttons__button
+      background: #1abc9c
+      border-top-left-radius: 3px
+      border-bottom-left-radius: 3px
+      color: #fff
+      height: 55px
+      line-height: 55px
+      text-transform: uppercase
+      position: relative
+      width: 245px
+      @media #{$max-sm}
+        width: 200px
+      &:before
+        background: rgba(255,255,255,0)
+        border-radius: 5px
+        content: ''
+        position: absolute
+        top: 0
+        transition: 0.4s
+        left: 0
+        width: 100%
+        height: 100%
+        transform: scale(0.5, 1)
+      &:hover:before
+        background: rgba(255,255,255,0.2)
+        transform: scale(1, 1)
+    .store-buttons__logo
+      background: $light-green
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+      color: #fff
+      height: 55px
+      width: 60px
+      transition: background 0.5s
+      i
+        padding: 11px
+      &:hover
+        background: transparent
+        i
+          color: $light-green
+          transition: color 0.5s
+
+/* ====================================
+   footer
+   ==================================*/
+
 @import "partials/footer"
