@@ -296,6 +296,225 @@
 body {
   font-family: 'Varela Round', sans-serif; }
 
+/* ====================================
+   Header
+   @mixin =================================*/
+/* ===================================
+   Header
+   @mixin ================================*/
+.header {
+  background: url(../images/Livello1.png) center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      height: auto;
+      min-height: 450px; } }
+  .header nav {
+    display: none; }
+  .header nav.nav-general {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0; }
+    .header nav.nav-general ul {
+      display: flex;
+      justify-content: center; }
+      @media only screen and (max-width: 767px) {
+        .header nav.nav-general ul {
+          flex-wrap: wrap;
+          padding: 10px 0 0; } }
+      .header nav.nav-general ul li {
+        text-align: center;
+        width: calc(18vw); }
+        @media only screen and (max-width: 767px) {
+          .header nav.nav-general ul li {
+            order: 1; } }
+        @media only screen and (max-width: 767px) {
+          .header nav.nav-general ul li:nth-of-type(3) {
+            order: 0; } }
+        .header nav.nav-general ul li a {
+          color: #fff;
+          display: block;
+          line-height: 55px;
+          text-decoration: none;
+          text-transform: uppercase; }
+          .header nav.nav-general ul li a:hover {
+            color: #16a085;
+            transition: color 0.3s; }
+        .header nav.nav-general ul li .livello-link {
+          background: url(../images/Livello2.png);
+          display: block;
+          height: 55px;
+          margin: 0 auto;
+          width: 53px; }
+          @media only screen and (max-width: 767px) {
+            .header nav.nav-general ul li .livello-link {
+              margin: 0 auto; } }
+        .header nav.nav-general ul li .burger-icon {
+          display: none;
+          width: 35px; }
+          .header nav.nav-general ul li .burger-icon span {
+            background: rgba(255, 255, 255, 0.5);
+            display: block;
+            height: 2px;
+            margin: 5px 0;
+            width: 30px;
+            transition: 0.5s; }
+        .header nav.nav-general ul li .burger-icon.burger-open span:first-of-type {
+          transform: rotate(45deg) translate(7px, 5px); }
+        .header nav.nav-general ul li .burger-icon.burger-open span:nth-of-type(2) {
+          opacity: 0; }
+        .header nav.nav-general ul li .burger-icon.burger-open span:last-of-type {
+          transform: rotate(-45deg) translate(5px, -3px); }
+  .header nav.top-nav {
+    position: absolute; }
+    .header nav.top-nav ul {
+      padding: 40px 0 0; }
+  .header nav.fixed-nav-hidden {
+    background: transparent;
+    transition: background 0.5s;
+    position: fixed;
+    top: 0; }
+    .header nav.fixed-nav-hidden ul {
+      padding: 0; }
+      .header nav.fixed-nav-hidden ul li a.livello-link {
+        opacity: 0; }
+      .header nav.fixed-nav-hidden ul li a {
+        color: transparent; }
+  .header nav.fixed-nav-visible {
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.5s;
+    position: fixed;
+    z-index: 2; }
+    .header nav.fixed-nav-visible ul {
+      padding: 0; }
+      .header nav.fixed-nav-visible ul li.livello:hover {
+        background: transparent; }
+      .header nav.fixed-nav-visible ul li:hover {
+        background: rgba(22, 160, 133, 0.5);
+        transition: 0.25s; }
+        .header nav.fixed-nav-visible ul li:hover a {
+          color: #fff;
+          transition: color 0.5s; }
+      .header nav.fixed-nav-visible ul li a.livello-link {
+        opacity: 1;
+        transition: 0.5s; }
+      .header nav.fixed-nav-visible ul li a.active {
+        color: #16a085; }
+        .header nav.fixed-nav-visible ul li a.active:hover {
+          color: #fff; }
+      .header nav.fixed-nav-visible ul li a {
+        color: #fff;
+        transition: color 0.5s; }
+  .header nav.burger-nav {
+    background: rgba(0, 0, 0, 0.5);
+    max-height: 55px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transition: max-height 0.3s;
+    z-index: 2; }
+    .header nav.burger-nav ul {
+      padding: 0; }
+      .header nav.burger-nav ul li.livello {
+        flex: 100%; }
+      .header nav.burger-nav ul li {
+        flex: 60%; }
+        .header nav.burger-nav ul li:not(.livello) {
+          background: rgba(0, 0, 0, 0.6); }
+        .header nav.burger-nav ul li .burger-icon {
+          cursor: pointer;
+          display: block;
+          left: 5%;
+          position: absolute;
+          top: 14.5px; }
+  .header nav.burger-nav.open {
+    max-height: 1000px;
+    transition: max-height 0.5s; }
+  .header h1 {
+    color: #fff;
+    font-size: 42px;
+    margin: 0 0 10px;
+    padding: 370px 0 0;
+    text-align: center;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 1199px) {
+      .header h1 {
+        margin: 0 0 10px;
+        padding: 320px 0 0; } }
+    @media only screen and (max-width: 991px) and (orientation: landscape) {
+      .header h1 {
+        margin: 0 0 10px;
+        padding: 230px 0 0; } }
+    @media only screen and (max-width: 767px) {
+      .header h1 {
+        font-size: 30px;
+        margin: 0 0 10px;
+        padding: 105px 0 0; } }
+  .header p {
+    color: #fff;
+    font-size: 20px;
+    text-align: center; }
+    @media only screen and (max-width: 991px) {
+      .header p {
+        font-size: 16px; } }
+  .header .button__header {
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #16a085;
+    border-radius: 5px;
+    margin: 30px auto 0;
+    padding: 20px 40px; }
+    @media only screen and (max-width: 767px) {
+      .header .button__header {
+        font-size: 14px; } }
+    .header .button__header:before {
+      background: rgba(255, 255, 255, 0.5);
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      transition: 0.5s;
+      width: 0; }
+    .header .button__header:hover:before {
+      background: rgba(255, 255, 255, 0);
+      transition: 0.5s;
+      width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .header .button__header {
+        font-size: 14px;
+        padding: 15px 30px; } }
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  position: absolute; }
+  @media only screen and (max-width: 991px) {
+    .social-icons {
+      bottom: 10px; } }
+  .social-icons ul {
+    display: flex;
+    margin: 0 auto; }
+    .social-icons ul li {
+      padding: 0 10px; }
+      .social-icons ul li i {
+        color: #fff; }
+      .social-icons ul li:hover i {
+        color: #16a085;
+        transition: color 0.25s; }
+
 /* ==============================
    Main general
    @mixin ===========================*/
@@ -558,222 +777,9 @@ body {
         color: #16a085;
         transition: color 0.5s; }
 
-/* ===================================
-   Header
-   @mixin ================================*/
-.header {
-  background: url(../images/Livello1.png) center/cover no-repeat;
-  height: 100vh;
-  position: relative;
-  text-align: center; }
-  @media only screen and (max-width: 767px) {
-    .header {
-      height: auto;
-      min-height: 450px; } }
-  .header nav {
-    display: none; }
-  .header nav.nav-general {
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0; }
-    .header nav.nav-general ul {
-      display: flex;
-      justify-content: center; }
-      @media only screen and (max-width: 767px) {
-        .header nav.nav-general ul {
-          flex-wrap: wrap;
-          padding: 10px 0 0; } }
-      .header nav.nav-general ul li {
-        text-align: center;
-        width: calc(18vw); }
-        @media only screen and (max-width: 767px) {
-          .header nav.nav-general ul li {
-            order: 1; } }
-        @media only screen and (max-width: 767px) {
-          .header nav.nav-general ul li:nth-of-type(3) {
-            order: 0; } }
-        .header nav.nav-general ul li a {
-          color: #fff;
-          display: block;
-          line-height: 55px;
-          text-decoration: none;
-          text-transform: uppercase; }
-          .header nav.nav-general ul li a:hover {
-            color: #16a085;
-            transition: color 0.3s; }
-        .header nav.nav-general ul li .livello-link {
-          background: url(../images/Livello2.png);
-          display: block;
-          height: 55px;
-          margin: 0 auto;
-          width: 53px; }
-          @media only screen and (max-width: 767px) {
-            .header nav.nav-general ul li .livello-link {
-              margin: 0 auto; } }
-        .header nav.nav-general ul li .burger-icon {
-          display: none;
-          width: 35px; }
-          .header nav.nav-general ul li .burger-icon span {
-            background: rgba(255, 255, 255, 0.5);
-            display: block;
-            height: 2px;
-            margin: 5px 0;
-            width: 30px;
-            transition: 0.5s; }
-        .header nav.nav-general ul li .burger-icon.burger-open span:first-of-type {
-          transform: rotate(45deg) translate(7px, 5px); }
-        .header nav.nav-general ul li .burger-icon.burger-open span:nth-of-type(2) {
-          opacity: 0; }
-        .header nav.nav-general ul li .burger-icon.burger-open span:last-of-type {
-          transform: rotate(-45deg) translate(5px, -3px); }
-  .header nav.top-nav {
-    position: absolute; }
-    .header nav.top-nav ul {
-      padding: 40px 0 0; }
-  .header nav.fixed-nav-hidden {
-    background: transparent;
-    transition: background 0.5s;
-    position: fixed;
-    top: 0; }
-    .header nav.fixed-nav-hidden ul {
-      padding: 0; }
-      .header nav.fixed-nav-hidden ul li a.livello-link {
-        opacity: 0; }
-      .header nav.fixed-nav-hidden ul li a {
-        color: transparent; }
-  .header nav.fixed-nav-visible {
-    background: rgba(0, 0, 0, 0.5);
-    transition: background 0.5s;
-    position: fixed;
-    z-index: 2; }
-    .header nav.fixed-nav-visible ul {
-      padding: 0; }
-      .header nav.fixed-nav-visible ul li.livello:hover {
-        background: transparent; }
-      .header nav.fixed-nav-visible ul li:hover {
-        background: rgba(22, 160, 133, 0.5);
-        transition: 0.25s; }
-        .header nav.fixed-nav-visible ul li:hover a {
-          color: #fff;
-          transition: color 0.5s; }
-      .header nav.fixed-nav-visible ul li a.livello-link {
-        opacity: 1;
-        transition: 0.5s; }
-      .header nav.fixed-nav-visible ul li a.active {
-        color: #16a085; }
-        .header nav.fixed-nav-visible ul li a.active:hover {
-          color: #fff; }
-      .header nav.fixed-nav-visible ul li a {
-        color: #fff;
-        transition: color 0.5s; }
-  .header nav.burger-nav {
-    background: rgba(0, 0, 0, 0.5);
-    max-height: 55px;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    transition: max-height 0.3s;
-    z-index: 2; }
-    .header nav.burger-nav ul {
-      padding: 0; }
-      .header nav.burger-nav ul li.livello {
-        flex: 100%; }
-      .header nav.burger-nav ul li {
-        flex: 60%; }
-        .header nav.burger-nav ul li:not(.livello) {
-          background: rgba(0, 0, 0, 0.6); }
-        .header nav.burger-nav ul li .burger-icon {
-          cursor: pointer;
-          display: block;
-          left: 5%;
-          position: absolute;
-          top: 14.5px; }
-  .header nav.burger-nav.open {
-    max-height: 1000px;
-    transition: max-height 0.5s; }
-  .header h1 {
-    color: #fff;
-    font-size: 42px;
-    margin: 0 0 10px;
-    padding: 370px 0 0;
-    text-align: center;
-    text-transform: uppercase; }
-    @media only screen and (max-width: 1199px) {
-      .header h1 {
-        margin: 0 0 10px;
-        padding: 320px 0 0; } }
-    @media only screen and (max-width: 991px) and (orientation: landscape) {
-      .header h1 {
-        margin: 0 0 10px;
-        padding: 230px 0 0; } }
-    @media only screen and (max-width: 767px) {
-      .header h1 {
-        font-size: 30px;
-        margin: 0 0 10px;
-        padding: 105px 0 0; } }
-  .header p {
-    color: #fff;
-    font-size: 20px;
-    text-align: center; }
-    @media only screen and (max-width: 991px) {
-      .header p {
-        font-size: 16px; } }
-  .header .button__header {
-    border: none;
-    color: #fff;
-    display: inline-block;
-    font-size: 16px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    background: #16a085;
-    border-radius: 5px;
-    margin: 30px auto 0;
-    padding: 20px 40px; }
-    @media only screen and (max-width: 767px) {
-      .header .button__header {
-        font-size: 14px; } }
-    .header .button__header:before {
-      background: rgba(255, 255, 255, 0.5);
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      transition: 0.5s;
-      width: 0; }
-    .header .button__header:hover:before {
-      background: rgba(255, 255, 255, 0);
-      transition: 0.5s;
-      width: 100%; }
-    @media only screen and (max-width: 767px) {
-      .header .button__header {
-        font-size: 14px;
-        padding: 15px 30px; } }
-
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  left: 0;
-  right: 0;
-  bottom: 25px;
-  position: absolute; }
-  @media only screen and (max-width: 991px) {
-    .social-icons {
-      bottom: 10px; } }
-  .social-icons ul {
-    display: flex;
-    margin: 0 auto; }
-    .social-icons ul li {
-      padding: 0 10px; }
-      .social-icons ul li i {
-        color: #fff; }
-      .social-icons ul li:hover i {
-        color: #16a085;
-        transition: color 0.25s; }
-
+/* ====================================
+   footer
+   @mixin =================================*/
 /* ================================
    Footer
    @mixin =============================*/
